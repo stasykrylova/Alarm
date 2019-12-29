@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cont_alarm_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+
+    android:elevation="2dp">
+
+    <!-- TODO: Consider converting this to a Constraint layout -->
+
+    <TextView
+        android:id="@+id/lbl_alarm_title"
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/reminders_alarm_title" />
+
+    <View
+        android:id="@+id/div_alarm_widget_one"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lbl_alarm_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/divider_white" />
+
+    <ImageView
+        android:id="@+id/im_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/div_alarm_widget_one"
+        android:padding="24dp"
+
+        android:src="@drawable/ic_done_white_24dp"
+        android:tint="@color/BLACK" />
+
+
+    <RelativeLayout
+        android:id="@+id/cont_alarm_time"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/div_alarm_widget_one"
+        android:layout_toEndOf="@+id/im_clock"
+        android:layout_toRightOf="@+id/im_clock"
+
+        >
+
+        <TextView
+            android:id="@+id/lbl_alarm_time"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerInParent="true"
+            android:text="12:00 pm" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/div_alarm_widget_two"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cont_alarm_time"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@id/im_clock"
+        android:background="@drawable/divider_white" />
+
+    <RelativeLayout
+        android:id="@+id/cont_alarm_activation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/div_alarm_widget_two"
+        android:layout_toEndOf="@+id/im_clock"
+        android:layout_toRightOf="@+id/im_clock"
+        android:background="@drawable/button_flat"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/lbl_alarm_activation"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ON" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swi_alarm_activation"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="48dp"
+            android:padding="8dp"
+             />
+
+    </RelativeLayout>
+
+</RelativeLayout>

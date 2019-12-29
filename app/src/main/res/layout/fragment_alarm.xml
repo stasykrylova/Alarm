@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/cont_alarm_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+
+    android:elevation="2dp">
+    <TextView
+        android:id="@+id/qvest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Please enter the answer:"
+        android:textColor="@color/BLACK"
+        android:textSize="20sp"
+
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="qvest"
+    android:textColor="@color/BLACK"
+    android:textSize="30sp"
+    android:layout_below="@+id/qvest"
+    android:id="@+id/tv_qv"
+    />
+
+    <EditText
+        android:id="@+id/edt_qv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_alarm_dismiss"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:hint="Thoughts?" />
+
+    <Button
+        android:id="@+id/btn_alarm_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:text="Stop Alarm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp" />
+
+
+</RelativeLayout>
+
